@@ -6,5 +6,8 @@ block content
   div(claass="container-fluid")
    div(class="row")
     each item,index in results
-     div(class="col-sm-2") Variety : #{item["variety"]} <br> Vitamin : #{item["vitamin"]} <br> Price : #{item["price"]}
-
+     div(class="col-sm-2",onClick=`buy(${index})`) Variety : #{item["variety"]} <br> Vitamin : #{item["vitamin"]} <br> Price : #{item["price"]}
+     script.
+        function buy(value) {
+            alert(`You purchased item ${value}`)
+        }
