@@ -12,7 +12,7 @@ block content
     var count=0
     var bump=1
     function doBump() {
-      count=bump
+      count +=bump
       bump=bump+1
       document.getElementById('Bump').innerHTML = `Count ${count} with bump ${bump}` 
     }
